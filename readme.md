@@ -1,4 +1,4 @@
-# C++ Boilerplate
+# Valgrind Exercise
 [![Build Status](https://app.travis-ci.com/siddharthtelang/Valgrind_Exercise.svg?branch=valgrind_exercise)](https://app.travis-ci.com/siddharthtelang/Valgrind_Exercise)
 ---
 
