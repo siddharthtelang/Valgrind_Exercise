@@ -1,0 +1,13 @@
+siddharth@siddharth:~/ENPM808X/valgrind/cpp-boilerplate$ cpplint $( find . -name *.cpp -or -name *.hpp | grep -vE -e "^./test/" -e "^./build/" -e "^./vendor/" )
+Done processing ./app/AnalogSensor.cpp
+Done processing ./app/main.cpp
+Done processing ./include/AnalogSensor.hpp
+
+
+siddharth@siddharth:~/ENPM808X/valgrind/cpp-boilerplate$ cppcheck $( find . -name *.cpp -or -name *.hpp | grep -vE -e "^./test/" -e "^./build/" -e "^./vendor/" )
+Checking app/AnalogSensor.cpp ...
+1/3 files checked 45% done
+Checking app/main.cpp ...
+2/3 files checked 77% done
+Checking include/AnalogSensor.hpp ...
+3/3 files checked 100% done
