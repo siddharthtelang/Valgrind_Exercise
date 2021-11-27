@@ -3,9 +3,6 @@
 #include <numeric>
 #include <vector>
 
-// AnalogSensor::AnalogSensor(std::unique_ptr<reader> reader_)
-//     : reader(reader_) {
-// }
 
 AnalogSensor::AnalogSensor(std::unique_ptr<Reader> reader_)
                             : reader(std::move(reader_)) {}

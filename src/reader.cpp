@@ -3,6 +3,8 @@
 Reader::Reader() {
 }
 
+Reader::~Reader() {}
+
 int Reader::readData(int serial) {
     if (serial < 0)
         return -1;
