@@ -1,20 +1,15 @@
 /* Copyright Siddharth [2021] */
-#include <AnalogSensor.hpp>
+#include "Sensor.hpp"
 #include <numeric>
 #include <vector>
 
-AnalogSensor::AnalogSensor(unsigned int samples)
-    : mSamples(samples) {
-}
+// AnalogSensor::AnalogSensor(std::unique_ptr<reader> reader_)
+//     : reader(reader_) {
+// }
 
-AnalogSensor::~AnalogSensor() {
-}
+AnalogSensor::AnalogSensor(std::unique_ptr<Reader> reader_)
+                            : reader(std::move(reader_)) {}
 
-int AnalogSensor::Read() {
-    std::vector<int> *readings = new std::vector<int>(mSamples, 10);
-
-    double result = std::accumulate(readings->begin(), readings->end(), 0.0)
-        / readings->size();
-    delete readings;
-    return result;
+int AnalogSensor::read(int serial) {
+    return reader->readData(serial);
 }
